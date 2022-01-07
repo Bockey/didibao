@@ -1,0 +1,57 @@
+section.her-and-him {
+  .limiter {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+  }
+  .her-and-him_images {
+    display: flex;
+    align-items: flex-end;
+    a {
+      color: getColor(white);
+      position: absolute;
+      right: 1rem;
+      bottom: 0.5rem;
+    }
+    .her-and-him-images_her {
+      position: relative;
+      height: 75%;
+      width: 50%;
+      background: no-repeat center/cover
+        url("/assets/images/mini_banner_girl_1.jpg");
+    }
+    .her-and-him-images_him {
+      position: relative;
+      height: 75%;
+      width: 50%;
+      background: no-repeat center/cover
+        url("/assets/images/mini_banner_men.jpg");
+    }
+  }
+  .her-and-him_buttons {
+    padding: 3rem 0;
+    @include flex(column, flex-start, center, wrap);
+    h2 {
+      text-transform: uppercase;
+    }
+    a {
+      color: getColor(black);
+      margin-top: 1rem;
+      @extend .buttons;
+    }
+  }
+  @media (min-width: 811px) {
+    .limiter {
+      padding: 4rem 5%;
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: unset;
+    }
+    .her-and-him_images {
+      align-items: center;
+      order: 2;
+    }
+    .her-and-him_buttons {
+      justify-content: center;
+    }
+  }
+}

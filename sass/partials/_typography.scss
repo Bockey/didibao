@@ -1,0 +1,16 @@
+body {
+  font: 14px $font-body;
+}
+
+h1 {
+  font: fontSize(biggest) $font-headings;
+}
+h2 {
+  font: fontSize(bigger2) $font-headings;
+}
+h3 {
+  font: fontSize(big) $font-headings;
+}
+a {
+  text-decoration: none;
+}

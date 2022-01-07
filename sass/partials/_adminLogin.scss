@@ -1,0 +1,52 @@
+.admin-login {
+  position: absolute;
+  width: 80vw;
+  max-width: 600px;
+  height: 60vh;
+  max-height: 400px;
+  background-color: getColor(white);
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 1px 1px 4px getColor(elements-gray);
+  .close-button {
+    background-color: getColor(black);
+    font-weight: bold;
+    cursor: default;
+    position: absolute;
+    padding: 0.3rem;
+    top: 1rem;
+    right: 1rem;
+    font-size: fontSize(big);
+  }
+  form {
+    width: 100%;
+    height: 100%;
+    @include flex(column, center, center, wrap);
+    .username,
+    .password {
+      width: 80%;
+      max-width: 350px;
+      @include flex(column, center, flex-start, wrap);
+    }
+    label {
+      color: getColor(black);
+      margin: 0.5rem 0;
+      font-size: fontSize(big);
+    }
+    input {
+      margin-bottom: 1rem;
+      width: 100%;
+      height: 2.5rem;
+      padding-left: 0.5rem;
+      font-size: fontSize(big);
+    }
+    button {
+      @extend .buttons;
+      background-color: getColor(black);
+      color: getColor(white);
+      margin-top: 2rem;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,152 @@
+.admin-body {
+  @include flex(column, center, center, no-wrap);
+}
+.admin-header {
+  position: static;
+  @include flex(row, space-between, center, wrap);
+  padding: 0 5%;
+  max-width: 1080px;
+  h1 {
+    font-size: fontSize(bigger);
+    span {
+      color: getColor(red);
+      display: inline-block;
+    }
+  }
+  .logout-btn {
+    display: inline-block;
+    background-color: getColor(black);
+    border: 1px solid;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.admin {
+  max-width: 1080px;
+  font-size: fontSize(big);
+  .current-products {
+    margin: 4rem 0;
+    @include flex(column, center, center, no-wrap);
+    h2 {
+      margin-bottom: 0;
+      color: getColor(white);
+      z-index: 10;
+    }
+    ol {
+      color: getColor(black);
+      max-height: 250px;
+      max-width: 700px;
+      overflow-y: scroll;
+      border: 2px solid gray;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+      box-shadow: 0 -5.5rem 0 gray;
+      li {
+        margin: 0.5rem 0;
+      }
+    }
+  }
+
+  .forms-container {
+    h2 {
+      padding: 0.5rem 5%;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    input {
+      margin: 0.5rem 0;
+      font-size: fontSize(big);
+    }
+    input[type="text"],
+    input[type="number"],
+    input[type="url"] {
+      @extend .input;
+    }
+    textarea {
+      width: 90vw;
+      max-width: 360px;
+      font-size: fontSize(big);
+      max-height: 360px;
+      padding: 0.5rem;
+    }
+    .form-btn {
+      width: 150px;
+      padding: 0.3rem;
+      font-weight: bold;
+      border: none;
+      background-color: getColor(black);
+      color: getColor(white);
+      margin: 0.3rem 0;
+    }
+    button {
+      @extend .form-btn;
+    }
+    .delete-button {
+      @extend .form-btn;
+      background-color: getColor(red);
+    }
+
+    .edit-form,
+    .add-form {
+      @include flex(column, center, flex-start, wrap);
+      padding-left: 5%;
+      padding-bottom: 4rem;
+      .flex-div {
+        @include flex(column, center, flex-start, wrap);
+        margin: 0.5rem 0;
+      }
+
+      #edit-id-input,
+      #edit-price_input,
+      #add-id-input,
+      #add-price_input {
+        -webkit-appearance: none;
+        -moz-appearance: textfield;
+      }
+      .edit-featured,
+      .add-featured {
+        margin-bottom: 2rem;
+      }
+      .edit-images {
+        .edit-image {
+          width: 150px;
+          height: 120px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+      .new-images {
+        margin-bottom: 2rem;
+        @include flex(column, center, flex-start, wrap);
+      }
+    }
+    .upload-image {
+      background-color: getColor(background-gray);
+      margin: 2rem 0;
+      padding: 2rem 0;
+      @include flex(column, center, flex-start, wrap);
+      input,
+      label,
+      p,
+      button {
+        margin: 0.5rem 5%;
+      }
+      input {
+        max-width: 90%;
+      }
+      label {
+        font-size: 30px;
+      }
+      p {
+        color: getColor(elements-gray);
+        font-size: 0.9rem;
+      }
+    }
+    @media (min-width: 900px) {
+      min-width: 900px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}

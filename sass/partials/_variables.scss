@@ -1,0 +1,29 @@
+$colors: (
+  white: #fff,
+  black: #000,
+  background-gray: #f2f2f2,
+  elements-gray: #c1c1c1,
+  red: #ff0000,
+  yellow: #edff00,
+  green: #397a01,
+);
+
+@function getColor($color) {
+  @return map-get($colors, $color);
+}
+
+$font-headings: "Overpass", "Roboto", sans-serif;
+$font-body: "Roboto", sans-serif;
+
+$font-sizes: (
+  biggest: 46px,
+  bigger2: 30px,
+  bigger: 22px,
+  big: 18px,
+  normal: 14px,
+  small: 12px,
+);
+
+@function fontSize($size) {
+  @return map-get($font-sizes, $size);
+}

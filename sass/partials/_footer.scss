@@ -1,0 +1,65 @@
+footer {
+  background-color: getColor(black);
+  color: getColor(white);
+  position: relative;
+  a {
+    color: getColor(white);
+    padding: 0.3rem;
+    margin: 0.1rem;
+  }
+  .limiter {
+    @include flex(column, center, center, wrap);
+    padding: 2rem 5% 4rem;
+    h3 {
+      text-transform: uppercase;
+    }
+    .logo-social-container {
+      @include flex(column, center, center, wrap);
+      .logo {
+        img {
+          width: 62px;
+          height: 50px;
+          color: white;
+          margin: 2rem;
+        }
+      }
+    }
+    .social-icons {
+      margin: 1rem 0;
+      a {
+        font-size: 1.5rem;
+      }
+    }
+    .get-help-links {
+      margin: 2rem 0;
+      @include flex(column, center, center, wrap);
+    }
+    .navigation-links {
+      margin: 2rem 0;
+      @include flex(column, center, center, wrap);
+      .open-login-form {
+        cursor: pointer;
+      }
+    }
+    .to-top {
+      position: absolute;
+      right: 2rem;
+      bottom: 4rem;
+      font-size: 2rem;
+    }
+    span {
+      position: absolute;
+      bottom: 0.1rem;
+      opacity: 0.4;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    @media (min-width: 1080px) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      .logo-social-container {
+        border-right: 1px solid getColor(white);
+      }
+    }
+  }
+}

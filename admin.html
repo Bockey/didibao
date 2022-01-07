@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>| Admin Page</title>
+  </head>
+  <body class="admin-body">
+    <header class="admin-header">
+      <h1>Welcome <span class="admin-welcome"></span></h1>
+      <span class="logout-btn">Logout</span>
+    </header>
+    <main>
+      <div class="limiter admin">
+        <div class="current-products">
+          <h2>Current products</h2>
+          <ol></ol>
+        </div>
+        <div class="forms-container">
+          <div>
+            <h2 class="edit-form-header">Edit Product</h2>
+            <form class="edit-form hide">
+              <div class="message-container"></div>
+              <div class="edit_id flex-div">
+                <label for="edit-id-input">1. Id</label>
+                <input
+                  type="number"
+                  id="edit-id-input"
+                  placeholder="Id of the product"
+                />
+                <button type="button" class="load-button">Load Product</button>
+                <button type="button" class="delete-button">
+                  Delete Product
+                </button>
+              </div>
+              <div class="edit-name flex-div">
+                <label for="edit-name_input">2. Product Name</label>
+                <input type="text" id="edit-name_input" />
+              </div>
+              <div class="edit-price flex-div">
+                <label for="edit-price_input">3. Product Price</label>
+                <input type="number" id="edit-price_input" step=".01" />
+              </div>
+              <div class="edit-description flex-div">
+                <label for="edit-description_input"
+                  >4. Product Description</label
+                >
+                <textarea
+                  name="edit-description_input"
+                  id="edit-description_input"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <div class="edit-featured">
+                <h3>Featured</h3>
+                <label for="edit-featured_yes">Yes</label>
+                <input
+                  type="radio"
+                  name="edit-featured"
+                  id="edit-featured_yes"
+                  value="yes"
+                />
+                <label for="edit-featured_no">No</label>
+                <input
+                  type="radio"
+                  name="edit-featured"
+                  id="edit-featured_no"
+                  value="no"
+                />
+              </div>
+              <div class="edit-images"></div>
+              <div class="new-images">
+                <label for="image-url">Enter new image URL</label>
+                <input type="url" name="image-url" id="image-url" required />
+              </div>
+              <button class="save-changes-button">Save Changes</button>
+            </form>
+          </div>
+          <div>
+            <h2 class="add-form-header">Add Product</h2>
+            <form class="add-form hide">
+              <div class="message-container-add"></div>
+              <div class="edit-add flex-div">
+                <label for="add-name_input">2. Product Name</label>
+                <input type="text" id="add-name_input" />
+              </div>
+              <div class="add-price flex-div">
+                <label for="add-price_input">3. Product Price</label>
+                <input type="number" id="add-price_input" step=".01" />
+              </div>
+              <div class="add-description flex-div">
+                <label for="add-description_input"
+                  >4. Product Description</label
+                >
+                <textarea
+                  name="add-description_input"
+                  id="add-description_input"
+                  cols="30"
+                  rows="10"
+                ></textarea>
+              </div>
+              <div class="add-featured">
+                <h3>Featured</h3>
+                <label for="add-featured_yes">Yes</label>
+                <input
+                  type="radio"
+                  name="add-featured"
+                  id="add-featured_yes"
+                  value="yes"
+                />
+                <label for="edit-featured_no">No</label>
+                <input
+                  type="radio"
+                  name="add-featured"
+                  id="add-featured_no"
+                  value="no"
+                />
+              </div>
+              <div class="new-images">
+                <label for="-add-image-url">Enter new image URL</label>
+                <input type="url" name="add-image-url" id="add-image-url" />
+              </div>
+
+              <button>Save Changes</button>
+            </form>
+          </div>
+          <form class="upload-image">
+            <label for="upload-image_input">Upload Image To Server</label>
+            <p>Note: You need to enable upload in strapi</p>
+            <div class="message-container-img-upload"></div>
+            <input
+              type="file"
+              name="upload-image_input"
+              id="upload-image_input"
+            />
+            <button>Upload</button>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/adminPage/adminPage.js" type="module"></script>
+  </body>
+</html>

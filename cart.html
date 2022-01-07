@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>| Cart</title>
+  </head>
+  <body class="cart-body">
+    <header>
+      <div class="limiter">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="./assets/images/logo.png" alt="logo"
+          /></a>
+        </div>
+        <nav>
+          <a href="/productList.html">Men</a>
+          <a href="/productList.html">Women</a>
+          <a href="/productList.html">Kids</a>
+          <a href="/productList.html">New Collection</a>
+        </nav>
+        <div class="header-icons">
+          <a href="/cart.html"
+            ><i class="fal fa-shopping-cart"><span class="cart-value"></span></i
+          ></a>
+          <span class="header-icons_menu"><i class="fas fa-bars"></i></span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <h1>Shopping cart</h1>
+      <div class="cart-container">
+        <div class="cart-items">
+          <div class="loader"></div>
+        </div>
+        <div class="cart-checkout"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="limiter">
+        <div class="logo-social-container">
+          <div class="logo">
+            <a href="/index.html"
+              ><img src="./assets/images/logo.png" alt="logo"
+            /></a>
+          </div>
+          <div class="social-icons">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+            <a href=""><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+        <div class="get-help-links">
+          <h3>Get Help</h3>
+          <a href="">Shipping & Delivery</a>
+          <a href="">Returns</a>
+          <a href="">Paymeny Options</a>
+          <a href="">Contact Us</a>
+        </div>
+        <div class="navigation-links">
+          <h3>Navigation Links</h3>
+          <a href="/productList.html">Men</a>
+          <a href="/productList.html">Women</a>
+          <a href="/productList.html">Kids</a>
+          <a class="open-login-form">Admin Panel</a>
+        </div>
+        <div class="admin-login hide">
+          <div class="close-button">X</div>
+          <form>
+            <div class="username">
+              <label for="username">Username</label>
+              <input type="text" id="username" placeholder="Username" />
+            </div>
+            <div class="password">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Password" />
+            </div>
+            <button>Login</button>
+            <div class="message-container"></div>
+          </form>
+        </div>
+        <a href="#" class="to-top"><i class="fas fa-chevron-up"></i></a>
+        <span>&copyBockey</span>
+      </div>
+    </footer>
+
+    <script src="./js/cartPage/cartPage.js" type="module"></script>
+  </body>
+</html>

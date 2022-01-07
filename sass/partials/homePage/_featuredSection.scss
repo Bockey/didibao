@@ -1,0 +1,56 @@
+.featured {
+  width: 100%;
+  padding: 4rem 0.5rem;
+  background: getColor(background-gray);
+  h2 {
+    margin-bottom: 4rem;
+  }
+  .carousel {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    overflow-x: scroll;
+  }
+  .carousel_track {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    @include flex(row, unset, center, nowrap);
+    pointer-events: none;
+    .carousel_product {
+      height: 100%;
+      width: 80vw;
+      max-width: 500px;
+      min-width: 320px;
+      margin-right: 1rem;
+      flex-shrink: 0;
+      padding-bottom: 3rem;
+      @include flex(column, flex-start, baseline, nowrap);
+      a {
+        pointer-events: initial;
+        color: getColor(green);
+      }
+      h3 {
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+      span {
+        color: getColor(elements-gray);
+      }
+      P {
+        font-size: fontSize(big);
+      }
+      .carousel_image-container {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  @media (min-width: 1080px) {
+    padding: 4rem 5%;
+  }
+}
