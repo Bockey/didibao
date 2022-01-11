@@ -38,7 +38,7 @@ export function editProduct(json) {
 /*This function loads product in edit form based on entered id*/
 
 function loadProduct(data) {
-  console.log(data);
+  console.log(id.value.trim());
 
   for (let i = 0; i < data.length; i++) {
     if (id.value.trim() == data[i].id) {
@@ -51,7 +51,7 @@ function loadProduct(data) {
         featuredNo.checked = true;
       }
       if (data[i].image.url) {
-        images.innerHTML = `<div class="edit-image" style="background-image: url(${apiUrl}${data[i].image.url})"></div>`;
+        images.innerHTML = `<div class="edit-image" style="background-image: url(${data[i].image.url})"></div>`;
       } else if (data[i].image_url !== "") {
         images.innerHTML = `<div class="edit-image" style="background-image: url(${data[i].image_url})"></div>`;
       } else {
@@ -105,7 +105,7 @@ function saveChanges(event) {
   const descriptionValue = description.value.trim();
   const priceValue = price.value.trim();
 
-  const imageUrlValue = imageUrl.value.trim();
+  // const imageUrlValue = imageUrl.value.trim();
 
   let featuredChecked;
   if (featuredYes.checked) {
@@ -116,12 +116,11 @@ function saveChanges(event) {
 
   if (
     idValue.length === 0 ||
-    isNaN(idValue) ||
     nameValue.length === 0 ||
     descriptionValue.length === 0 ||
     priceValue.length === 0 ||
-    isNaN(priceValue) ||
-    imageUrlValue.length === 0
+    isNaN(priceValue)
+    // imageUrlValue.length === 0
   ) {
     return displayMessage(
       "warning",
@@ -135,21 +134,19 @@ function saveChanges(event) {
     nameValue,
     priceValue,
     descriptionValue,
-    featuredChecked,
-    imageUrlValue
+    featuredChecked
   );
 }
 
 /* This function send request to strapi with new values of the product */
 
-async function updateProduct(id, name, price, description, featured, imageURL) {
+async function updateProduct(id, name, price, description, featured) {
   const url = apiUrl + "/products/" + id;
   const data = JSON.stringify({
     title: name,
     price: price,
     description: description,
     featured: featured,
-    image_url: imageURL,
   });
   const token = getToken();
   const options = {
@@ -164,8 +161,7 @@ async function updateProduct(id, name, price, description, featured, imageURL) {
   try {
     const response = await fetch(url, options);
     const json = await response.json();
-
-    if (json.updated_at) {
+    if (json.updatedAt) {
       displayMessage(
         "success",
         "Successfuly updated. <br>Please refresh the page to see your changes.",

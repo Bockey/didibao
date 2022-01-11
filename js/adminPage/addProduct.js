@@ -9,7 +9,7 @@ const description = document.querySelector("#add-description_input");
 const featuredYes = document.querySelector("#add-featured_yes");
 const featuredNo = document.querySelector("#add-featured_no");
 const addForm = document.querySelector(".add-form");
-const imageUrl = document.querySelector("#add-image-url");
+// const imageUrl = document.querySelector("#add-image-url");
 
 export function addProduct(json) {
   addForm.addEventListener("submit", saveChanges);
@@ -23,7 +23,7 @@ function saveChanges(event) {
   const nameValue = name.value.trim();
   const descriptionValue = description.value.trim();
   const priceValue = price.value.trim();
-  const imageUrlValue = imageUrl.value.trim();
+  // const imageUrlValue = imageUrl.value.trim();
 
   let featuredChecked;
   if (featuredYes.checked) {
@@ -47,25 +47,18 @@ function saveChanges(event) {
     );
   }
 
-  uploadProduct(
-    nameValue,
-    priceValue,
-    descriptionValue,
-    featuredChecked,
-    imageUrlValue
-  );
+  uploadProduct(nameValue, priceValue, descriptionValue, featuredChecked);
 }
 
 /* This function send request to strapi with  values of the product */
 
-async function uploadProduct(name, price, description, featured, imageURL) {
+async function uploadProduct(name, price, description, featured) {
   const url = apiUrl + "/products";
   const data = JSON.stringify({
     title: name,
     price: price,
     description: description,
     featured: featured,
-    image_url: imageURL,
   });
   const token = getToken();
 
@@ -82,7 +75,7 @@ async function uploadProduct(name, price, description, featured, imageURL) {
     const response = await fetch(url, options);
     const json = await response.json();
 
-    if (json.updated_at) {
+    if (json.updatedAt) {
       displayMessage(
         "success",
         "Successfuly added product. <br>Please refresh the page to see your changes.",
