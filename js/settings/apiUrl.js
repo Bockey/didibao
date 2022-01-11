@@ -1,1 +1,1 @@
-export const apiUrl = "https://semester-sp2.herokuapp.com";
+export const apiUrl = "https://semester-project-sp2.herokuapp.com";

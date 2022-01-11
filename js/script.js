@@ -21,7 +21,7 @@ const previewImage = document.querySelector(".product-preview_image");
     const responseHero = await fetch(heroBanner);
     const jsonHero = await responseHero.json();
 
-    landingSection.style.backgroundImage = `url(${jsonHero.image[0].url})`;
+    landingSection.style.backgroundImage = `url(${jsonHero.image.url})`;
 
     const responseProducts = await fetch(productsUrl);
     const jsonProducts = await responseProducts.json();
