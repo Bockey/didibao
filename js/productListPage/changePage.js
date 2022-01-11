@@ -26,6 +26,7 @@ export function changePage(data) {
       counter = button.dataset.counter - 12;
       displayProducts(data, counter);
       // location.href = "/productList.html#top"; // after click on th btn page scroll to the top of product list
+      location.href = "#top";
     });
   });
 }
