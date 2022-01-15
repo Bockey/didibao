@@ -37,9 +37,7 @@ main {
   opacity: 0.6;
 }
 
-.limiter {
-  max-width: 1920px;
-}
+
 
 .fetchError {
   width: 100%;
