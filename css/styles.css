@@ -1522,7 +1522,6 @@ section.recommended .recommended-product-image {
 
 .cart-body main {
   margin: calc(89px + 4rem) 5% 4rem 5%;
-  max-width: 1920px;
 }
 
 .cart-body main h1 {
