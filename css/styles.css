@@ -1082,7 +1082,6 @@ footer .limiter span {
 
 .product-list-body main {
   margin: calc(89px + 4rem) 5% 4rem 5%;
-  max-width: 1920px;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
