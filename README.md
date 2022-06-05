@@ -1,7 +1,9 @@
 
 
 ![logo](assets/images/logo.png) 
-semester project 2
+
+## semester project 2
+
 
 - E-commerce site - sneakers shop.
 - School project
