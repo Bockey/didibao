@@ -1,9 +1,11 @@
 
+<div align="center">
+  <img alt="logo" src="assets/images/logo.png"/>
+</div>
 
-![logo](assets/images/logo.png) 
+<br>
 
-## semester project 2
-
+<h1>Semester project 2</h1> 
 
 - E-commerce site - sneakers shop.
 - School project
