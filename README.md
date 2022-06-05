@@ -22,9 +22,9 @@ Live at https://didibao.netlify.app
 
 ![Home page](assets/didibao-home.gif) 
 
-## Products
+## Search
 
-![Products](assets/didibao-search.gif) 
+![Search](assets/didibao-search.gif) 
 
 ## Admin page
 
