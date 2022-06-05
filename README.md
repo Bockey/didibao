@@ -1,8 +1,6 @@
 
 
-# Didibao - semester project 2
-
-![logo](assets/images/logo.png)
+![logo](assets/images/logo.png) -  semester project 2
 
 - E-commerce site - sneakers shop.
 - School project
