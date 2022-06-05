@@ -18,6 +18,18 @@ Api created with Strapi and hosted on Heroku (therefore slower response).
 
 Live at https://didibao.netlify.app
 
+## Home page
+
+![Home page](assets/didibao-home.gif) 
+
+## Products
+
+![Products](assets/didibao-search.gif) 
+
+## Admin page
+
+![Admin page](assets/didibao-admin.gif) 
+
 
 ## Contact
 
