@@ -35,8 +35,6 @@ Live at https://didibao.netlify.app
 
 ## Contact
 
-This is where you can leave your social links for people to contact you, such as a LinkedIn profile or Twitter link e.g.
-
 [My portfolio page](https://bockey.one/)
 
 [My LinkedIn page](https://www.linkedin.com/in/boris-gudelj-a535091b4/)
